@@ -1,0 +1,30 @@
+.header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: #000000;
+  padding: 14px;
+  background: #f5f5f5;
+  border: 1px solid #dfdfe0;
+  text-align: center;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.header-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.header-justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > svg {
+  fill: #6f6e73;
+}
