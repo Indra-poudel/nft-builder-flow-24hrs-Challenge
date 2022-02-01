@@ -18,10 +18,11 @@ const Button = ({
     onClick,
     disable
 }: ButtonProps) => {
+
     return (
         <button
             disabled={disable}
-            className={cn('button', buttonType, className)}
+            className={cn('button', `${buttonType}-button`, className)}
             onClick={onClick}
         >
             <span className="button-label">{label}</span> <ChevronRightIcon />

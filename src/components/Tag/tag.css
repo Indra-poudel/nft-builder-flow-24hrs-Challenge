@@ -1,0 +1,18 @@
+.tag {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.154px;
+  display: inline-flex;
+  padding: 6px 12px;
+  color: #6f6e73;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.active-tag {
+  color: #414047;
+  background: #fcfcfc;
+  border: 1px solid #bebec2;
+  border-radius: 10px;
+}
