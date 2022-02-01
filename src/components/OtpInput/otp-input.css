@@ -1,0 +1,8 @@
+.otp-input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.otp-input {
+  width: 42px;
+}

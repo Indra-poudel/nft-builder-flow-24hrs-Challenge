@@ -1,4 +1,5 @@
 import React from 'react';
+import OtpInput from './components/OtpInput';
 import Homepage from './screens/Homepage';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Header centerContent={'Verification'} enableCancel />
       <br /> */}
       <Homepage onClickContinue={() => { }} onClickLoginWithNear={() => { }} />
+      <OtpInput onChange={() => { }} />
     </div>
   );
 }

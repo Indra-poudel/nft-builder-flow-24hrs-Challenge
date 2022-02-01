@@ -9,8 +9,9 @@ type TextFieldProps = {
     placeholder?: string,
     className?: string,
     errorMessage?: string,
-    type?: string
-    value?: string
+    type?: string,
+    value?: string,
+    maxLength?: number,
     onChange: (event: React.FormEvent<HTMLInputElement>) => void
 }
 
@@ -23,6 +24,7 @@ const TextField = ({
     placeholder,
     value,
     onChange,
+    maxLength
 }: TextFieldProps) => {
     return (
         <div className={cn('text-field', className, {
@@ -31,7 +33,7 @@ const TextField = ({
             {label && (<span className="label-wrapper">
                 <label htmlFor={inputId}>{label}</label> <InfoIcon fontSize="small" />
             </span>)}
-            <input value={value} onChange={onChange} placeholder={placeholder} type={type} id={inputId} name={inputId}></input>
+            <input maxLength={maxLength} value={value} onChange={onChange} placeholder={placeholder} type={type} id={inputId} name={inputId}></input>
             <span>{errorMessage}</span>
         </div>
     );

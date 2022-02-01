@@ -38,7 +38,7 @@ const Homepage = ({ onClickContinue, onClickLoginWithNear }: HomepageProps) => {
         setErrorMessage('')
         //redirect
       } else {
-        const errorMessage = "Please enter a valid 10 digit number"
+        const errorMessage = "Please enter a valid 10 digit phone number"
         setErrorMessage(errorMessage)
       }
     }
