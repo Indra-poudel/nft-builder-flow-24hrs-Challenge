@@ -1,0 +1,32 @@
+.button {
+  background-color: #885fff;
+  border: none;
+  color: #ffffff;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-label {
+  margin-right: 16px;
+  margin-left: 8px;
+}
+
+.secondary {
+  background-color: #414047;
+}
+
+.disable {
+  background-color: #bebec2;
+  cursor: not-allowed;
+}
