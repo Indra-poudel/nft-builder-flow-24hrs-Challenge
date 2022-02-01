@@ -1,0 +1,8 @@
+.tag-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.email-phone-field-wrapper {
+  text-align: center;
+}

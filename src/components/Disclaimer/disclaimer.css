@@ -1,0 +1,14 @@
+.disclaimer-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #6f6e73;
+  margin: 24px 0;
+}
+
+.link {
+  color: #9db7ff;
+  text-decoration: none;
+}

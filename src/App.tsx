@@ -1,14 +1,10 @@
 import React from 'react';
-import { logo } from './assets/images';
-import Button from './components/Button';
-import Header from './components/Header';
-import Tag from './components/Tag';
-import TextField from './components/TextField';
+import Homepage from './screens/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <Button label="Button" buttonType='primary' />
+      {/* <Button label="Button" buttonType='primary' />
       <Button label="Secondary" buttonType='secondary' />
       <Button label="Disable" buttonType='disable' />
       <Tag label='active' />
@@ -21,6 +17,8 @@ function App() {
       </>} />
 
       <Header centerContent={'Verification'} enableCancel />
+      <br /> */}
+      <Homepage onClickContinue={() => { }} onClickLoginWithNear={() => { }} />
     </div>
   );
 }
