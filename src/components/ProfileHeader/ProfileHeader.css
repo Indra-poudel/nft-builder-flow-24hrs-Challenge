@@ -1,0 +1,39 @@
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: #000000;
+  padding: 8px;
+  background: #f5f5f5;
+  border: 1px solid #dfdfe0;
+  text-align: center;
+}
+
+.prefix-icons > * {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.profile-avatar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid #dfdfe0;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.profile-avatar > svg {
+  fill: #c4c4c4;
+}
+
+.username {
+  margin: 0 15px;
+}

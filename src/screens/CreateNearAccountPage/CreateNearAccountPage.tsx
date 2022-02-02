@@ -30,7 +30,11 @@ const CreateNearAccountPage = () => {
 
     const handleContinue = () => {
         if (fullName.length >= 5 && accountId.length >= 5) {
-            navigation(ROUTES.PROFILE)
+            navigation(ROUTES.PROFILE, {
+                state: {
+                    accountId,
+                }
+            })
         } else {
             setErrorMessage("Value should contain at least 5 letter")
         }
