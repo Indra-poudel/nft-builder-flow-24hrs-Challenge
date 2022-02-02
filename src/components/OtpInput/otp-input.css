@@ -4,5 +4,27 @@
 }
 
 .otp-input {
-  width: 42px;
+  width: 55px;
+  padding: 0px;
+}
+
+.otp-wrapper {
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.otp-wrapper > p {
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #808080;
+}
+
+.otp-wrapper > span {
+  color: #e08080;
+  font-size: 13px;
+  line-height: 18px;
 }

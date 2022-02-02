@@ -12,7 +12,7 @@ type TextFieldProps = {
     type?: string,
     value?: string,
     maxLength?: number,
-    onChange: (event: React.FormEvent<HTMLInputElement>) => void
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const TextField = ({

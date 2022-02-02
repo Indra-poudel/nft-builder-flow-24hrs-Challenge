@@ -1,0 +1,23 @@
+.info-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #414047;
+}
+
+.phone-email {
+  color: #799cff;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.verification-info > * {
+  text-align: center;
+  margin-top: 25px;
+}

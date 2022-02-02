@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import Header from "../../components/Header";
 import { logo } from "../../assets/images";
@@ -11,13 +12,11 @@ import Disclaimer from "../../components/Disclaimer";
 import LoginWithNear from "../../components/LoginWithNear/LoginWithNear";
 import { isValidEmail, isValidPhoneNo } from "../../utils/validate";
 
-type HomepageProps = {
-  onClickLoginWithNear: () => void;
-  onClickContinue: () => void;
-};
 
-const Homepage = ({ onClickContinue, onClickLoginWithNear }: HomepageProps) => {
 
+const Homepage = () => {
+
+  const navigation = useNavigate();
   const [selectedMedium, setSelectedMedium] = useState<VerificationCodeMedium>(VerificationCodeMedium.phone);
   const [errorMessage, setErrorMessage] = useState<string>('')
 
@@ -36,7 +35,11 @@ const Homepage = ({ onClickContinue, onClickLoginWithNear }: HomepageProps) => {
       const isValidPhone = isValidPhoneNo(inputText)
       if (isValidPhone) {
         setErrorMessage('')
-        //redirect
+        navigation('/verification', {
+          state: {
+            inputText: inputText,
+          }
+        })
       } else {
         const errorMessage = "Please enter a valid 10 digit phone number"
         setErrorMessage(errorMessage)
@@ -47,7 +50,11 @@ const Homepage = ({ onClickContinue, onClickLoginWithNear }: HomepageProps) => {
       const isEmailValid = isValidEmail(inputText)
       if (isEmailValid) {
         setErrorMessage('')
-        //redirect
+        navigation('/verification', {
+          state: {
+            inputText: inputText,
+          }
+        })
       }
       else {
         const errorMessage = "Please enter a valid email address"
@@ -69,6 +76,7 @@ const Homepage = ({ onClickContinue, onClickLoginWithNear }: HomepageProps) => {
 
   const handleInputChange = (event: React.FormEvent<HTMLInputElement>) => {
     setInputText(event.currentTarget.value)
+    console.log(inputText)
   }
 
   return <>

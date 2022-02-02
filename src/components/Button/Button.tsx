@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cn from 'classnames';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './button.css'
 
 type ButtonProps = {
     label: string,
-    buttonType?: 'primary' | 'secondary' | 'disable'
+    buttonType: 'primary' | 'secondary' | 'disable'
     className?: string,
     onClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
     disable?: boolean
@@ -19,14 +19,21 @@ const Button = ({
     disable
 }: ButtonProps) => {
 
+    const [buttonTypeState, setButtonType] = useState<string>('primary')
+
+    useEffect(() => {
+        setButtonType(buttonType)
+    }, [buttonType])
+
+
     return (
         <button
             disabled={disable}
             className={cn('button', `${buttonType}-button`, className)}
-            onClick={onClick}
+            onClick={buttonType !== 'disable' ? onClick : () => { }}
         >
             <span className="button-label">{label}</span> <ChevronRightIcon />
-        </button>
+        </button >
     );
 };
 
@@ -35,4 +42,4 @@ Button.defaultProps = {
     onClick: () => { },
 };
 
-export default Button;
+export default Button
