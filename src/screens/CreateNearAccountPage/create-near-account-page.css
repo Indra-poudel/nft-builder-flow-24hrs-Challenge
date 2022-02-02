@@ -1,0 +1,12 @@
+.create-account-info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #808080;
+  margin: 4px;
+}
+
+.full-name-account-field-wrapper {
+  margin-top: 24px;
+}

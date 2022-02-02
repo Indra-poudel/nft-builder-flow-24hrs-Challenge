@@ -1,19 +1,24 @@
-import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import Header from "../../components/Header";
-import { logo } from "../../assets/images";
+import { useNavigate } from "react-router-dom";
+
 import Tag from "../../components/Tag";
-import { VerificationCodeMedium } from "../../constants/constants";
-import { HOMEPAGE_LOCALE } from "../../lang/en";
-import TextField from "../../components/TextField";
-import "./homepage.css";
+import { logo } from "../../assets/images";
+import Header from "../../components/Header";
 import Button from "../../components/Button";
+import { HOMEPAGE_LOCALE } from "../../lang/en";
+import { ROUTES } from "../../constants/routes";
+import TextField from "../../components/TextField";
 import Disclaimer from "../../components/Disclaimer";
-import LoginWithNear from "../../components/LoginWithNear/LoginWithNear";
+import { VerificationCodeMedium } from "../../constants/constants";
 import { isValidEmail, isValidPhoneNo } from "../../utils/validate";
+import LoginWithNear from "../../components/LoginWithNear/LoginWithNear";
+import "./homepage.css";
 
-
-
+/**
+ * PageLevel Component of Homepage.
+ * 
+ * @returns JSX Elements
+ */
 const Homepage = () => {
 
   const navigation = useNavigate();
@@ -35,14 +40,13 @@ const Homepage = () => {
       const isValidPhone = isValidPhoneNo(inputText)
       if (isValidPhone) {
         setErrorMessage('')
-        navigation('/verification', {
+        navigation(ROUTES.VERIFICATION, {
           state: {
             inputText: inputText,
           }
         })
       } else {
-        const errorMessage = "Please enter a valid 10 digit phone number"
-        setErrorMessage(errorMessage)
+        setErrorMessage(HOMEPAGE_LOCALE.ERROR_MESSAGE.PHONE)
       }
     }
 
@@ -50,18 +54,20 @@ const Homepage = () => {
       const isEmailValid = isValidEmail(inputText)
       if (isEmailValid) {
         setErrorMessage('')
-        navigation('/verification', {
+        navigation(ROUTES.VERIFICATION, {
           state: {
             inputText: inputText,
           }
         })
       }
       else {
-        const errorMessage = "Please enter a valid email address"
-        setErrorMessage(errorMessage)
+        setErrorMessage(HOMEPAGE_LOCALE.ERROR_MESSAGE.EMAIL)
       }
     }
+  }
 
+  const handleLoginWithNear = () => {
+    navigation(ROUTES.CREATE_USING_NEAR)
   }
 
   /**
@@ -76,7 +82,6 @@ const Homepage = () => {
 
   const handleInputChange = (event: React.FormEvent<HTMLInputElement>) => {
     setInputText(event.currentTarget.value)
-    console.log(inputText)
   }
 
   return <>
@@ -91,14 +96,14 @@ const Homepage = () => {
 
         <div className="email-phone-field-wrapper">
           {selectedMedium === VerificationCodeMedium.phone ?
-            <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='phone' placeholder='Ex (337) 378 8383' />
-            : <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='email' placeholder='indra@example.com' />}
+            <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='phone' placeholder={HOMEPAGE_LOCALE.PLACEHOLDER.EMAIL} />
+            : <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='email' placeholder={HOMEPAGE_LOCALE.PLACEHOLDER.PHONE} />}
           <Button label="Continue" onClick={handleContinueClick} buttonType={inputText ? 'primary' : 'disable'} />
         </div>
       </div>
       <div className="footer-wrapper">
         <Disclaimer />
-        <LoginWithNear onClick={() => { }} />
+        <LoginWithNear onClick={handleLoginWithNear} />
       </div>
     </div>
 

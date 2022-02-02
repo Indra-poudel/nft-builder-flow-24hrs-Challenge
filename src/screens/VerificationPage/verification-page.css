@@ -14,7 +14,7 @@
 .button-wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
+  margin: 24px 0;
 }
 
 .verification-info > * {

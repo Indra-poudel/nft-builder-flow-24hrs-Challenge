@@ -3,9 +3,14 @@
   justify-content: center;
 }
 
-.otp-input {
-  width: 55px;
-  padding: 0px;
+.otp-input > input {
+  width: 42px !important;
+  height: 42px !important;
+  margin: 8px;
+  padding: 4px;
+  border: 1px solid #bebec2;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .otp-wrapper {

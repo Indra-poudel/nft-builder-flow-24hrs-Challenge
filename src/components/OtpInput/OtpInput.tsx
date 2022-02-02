@@ -1,35 +1,32 @@
 import React from "react";
+import OtpInput from 'react-otp-input'
 import './otp-input.css'
 import TextField from "../TextField";
 
-type OtpInputProps = {
+type OtpFieldProps = {
     noOfInputs?: number,
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    onChange: (otp: string) => void,
     value: string,
     errorMessage?: string,
 }
 
-const OtpInput = ({
+const OtpField = ({
     noOfInputs,
     onChange,
     value,
     errorMessage,
-}: OtpInputProps) => {
-
-    const splitValue: Array<string> | undefined = value.split('')
-
-    // console.log(splitValue)
+}: OtpFieldProps) => {
 
     return (
         <div className="otp-wrapper">
             <p>Enter verification code</p>
             <div className="otp-input-wrapper">
-                {
-
-                    [...Array(noOfInputs)].map((value: number, index: number) =>
-                        <TextField key={index} className="otp-input" maxLength={1} onChange={onChange} value={splitValue[index]} inputId={`otp-${index}`} />
-                    )
-                }
+                <OtpInput
+                    className="otp-input"
+                    value={value}
+                    onChange={onChange}
+                    numInputs={noOfInputs}
+                />
             </div>
             <span>{errorMessage}</span>
         </div>
@@ -37,9 +34,9 @@ const OtpInput = ({
     )
 };
 
-OtpInput.defaultProps = {
+OtpField.defaultProps = {
     noOfInputs: 6,
 
 };
 
-export default OtpInput;
+export default OtpField;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import cn from 'classnames';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './button.css'
@@ -18,19 +18,11 @@ const Button = ({
     onClick,
     disable
 }: ButtonProps) => {
-
-    const [buttonTypeState, setButtonType] = useState<string>('primary')
-
-    useEffect(() => {
-        setButtonType(buttonType)
-    }, [buttonType])
-
-
     return (
         <button
             disabled={disable}
             className={cn('button', `${buttonType}-button`, className)}
-            onClick={buttonType !== 'disable' ? onClick : () => { }}
+            onClick={buttonType !== 'disable' ? onClick : (() => { })}
         >
             <span className="button-label">{label}</span> <ChevronRightIcon />
         </button >

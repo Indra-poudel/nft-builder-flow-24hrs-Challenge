@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import { isValidPhoneNo } from "../../utils/validate";
 import { useLocation, useNavigate } from "react-router-dom";
 import OtpInput from "../../components/OtpInput";
+import { ROUTES } from "../../constants/routes";
 
 
 const VerificationPage = () => {
@@ -23,14 +24,14 @@ const VerificationPage = () => {
     const [inputOpt, setInputOpt] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState<string>('')
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputOpt(inputOpt + event.target.value)
+    const handleInputChange = (otp: string) => {
+        setInputOpt(otp)
     }
 
     const handleContinueClick = () => {
         console.log("calling")
         if (inputOpt.length === 6) {
-            navigation('/profile')
+            navigation(ROUTES.CREATE_USING_NEAR)
         } else {
             setErrorMessage('Please enter a valid opt number')
         }

@@ -1,15 +1,9 @@
 .text-field {
   margin: 8px;
+  margin-bottom: 15px;
 }
 
-.text-field > input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  background: #fcfcfc;
-  border: 1px solid #bebec2;
-  box-sizing: border-box;
-  border-radius: 8px;
+.text-field > .input-field > input {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -33,17 +27,11 @@
   fill: #6f6e73;
 }
 
-.text-field > input:focus {
-  border: 2px solid #885fff;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
 .error-text-field > .label-wrapper > label {
   color: #e08080;
 }
 
-.error-text-field > input {
+.error-text-field > .input-field {
   outline-color: #e08080;
   border-color: #e08080;
 }
@@ -69,4 +57,41 @@
 ::placeholder {
   color: #828282;
   font-weight: normal;
+}
+
+.input-field {
+  display: flex;
+  margin: 8px 0;
+  background: #fcfcfc;
+  border: 2px solid #bebec2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  height: 44px;
+}
+
+.input-suffix {
+  border-left: 2px solid #bebec2;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-field > input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+.isFocus {
+  border: 2px solid #885fff;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
