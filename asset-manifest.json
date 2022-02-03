@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nft-builder-flow-24hrs-Challenge/static/css/main.2c5435af.css",
-    "main.js": "/nft-builder-flow-24hrs-Challenge/static/js/main.f61476d6.js",
+    "main.js": "/nft-builder-flow-24hrs-Challenge/static/js/main.4b9f5f12.js",
     "static/js/787.3e3b5398.chunk.js": "/nft-builder-flow-24hrs-Challenge/static/js/787.3e3b5398.chunk.js",
     "index.html": "/nft-builder-flow-24hrs-Challenge/index.html",
     "main.2c5435af.css.map": "/nft-builder-flow-24hrs-Challenge/static/css/main.2c5435af.css.map",
-    "main.f61476d6.js.map": "/nft-builder-flow-24hrs-Challenge/static/js/main.f61476d6.js.map",
+    "main.4b9f5f12.js.map": "/nft-builder-flow-24hrs-Challenge/static/js/main.4b9f5f12.js.map",
     "787.3e3b5398.chunk.js.map": "/nft-builder-flow-24hrs-Challenge/static/js/787.3e3b5398.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c5435af.css",
-    "static/js/main.f61476d6.js"
+    "static/js/main.4b9f5f12.js"
   ]
 }
