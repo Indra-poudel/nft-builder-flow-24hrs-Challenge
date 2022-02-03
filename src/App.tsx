@@ -9,7 +9,7 @@ import VerificationPage from './screens/VerificationPage';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.NODE_ENV === 'development' ? '' : '/nft-builder-flow-24hrs-Challenge'}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path={ROUTES.HOMEPAGE} element={<Homepage />} />
         <Route path={ROUTES.VERIFICATION} element={<VerificationPage />} />
