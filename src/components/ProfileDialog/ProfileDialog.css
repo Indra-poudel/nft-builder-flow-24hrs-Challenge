@@ -1,0 +1,80 @@
+.card-wrapper {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 320px;
+}
+
+.menu-name {
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #414047;
+  align-items: center;
+}
+
+.card-upper-section {
+  padding: 20px;
+}
+
+.card-lower-section {
+  border: 1px solid #dfdfe0;
+  padding: 20px;
+}
+
+.dialog-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #a0a0a2;
+  margin-bottom: 20px;
+}
+
+.select-user-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.select-user-prefix {
+  display: flex;
+  align-items: center;
+}
+
+.user-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.selected-user-name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #414047;
+}
+
+.near-value {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6f6e73;
+}
+
+.select-user-suffix > svg {
+  fill: #6f6e73;
+}
+
+.menu-name > svg {
+  fill: #6f6e73;
+}
+
+.menu-name > span {
+  margin-left: 20px;
+}
+
+.lower-menu {
+  margin-bottom: 16px;
+}

@@ -32,7 +32,7 @@ const CreateNearAccountPage = () => {
         if (fullName.length >= 5 && accountId.length >= 5) {
             navigation(ROUTES.PROFILE, {
                 state: {
-                    accountId,
+                    accountId: `${accountId}.near`,
                 }
             })
         } else {

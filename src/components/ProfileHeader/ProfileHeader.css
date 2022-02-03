@@ -37,3 +37,8 @@
 .username {
   margin: 0 15px;
 }
+
+.avatar {
+  width: 10px;
+  height: 10px;
+}

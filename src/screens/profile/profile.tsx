@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Dialog from '@mui/material/Dialog';
 
 import ProfileHeader from "../../components/ProfileHeader";
 import "./profile.css";
+import ProfileDialog from "../../components/ProfileDialog";
 
 /**
  * Profile Page.
  * 
  * @returns JSX Elements
  */
-const Homepage = () => {
+const Profile = () => {
 
     const { state } = useLocation() as {
         state: {
@@ -17,16 +19,25 @@ const Homepage = () => {
         }
     };
 
+    const [isDialogOpen, setDialogFlag] = useState<boolean>(false)
 
-    return <>
-        <ProfileHeader onClickAvatar={() => { }} accountId={state.accountId} />
-        <div className="body-wrapper">
-
-        </div>
-
+    const handleAvatarClick = () => {
+        setDialogFlag(!isDialogOpen)
+    }
 
 
-    </>;
+
+
+    return (
+        <>
+            <ProfileHeader onClickAvatar={handleAvatarClick} accountId={state.accountId} />
+            <div className="body-wrapper">
+            </div>
+            <ProfileDialog selectedAccountId={state.accountId} isOpen={isDialogOpen} handleClose={() => {
+                setDialogFlag(false)
+            }} />
+        </>
+    );
 };
 
-export default Homepage;
+export default Profile;

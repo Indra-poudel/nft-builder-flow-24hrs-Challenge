@@ -14,14 +14,14 @@ const ProfileHeader = ({
 }: ProfileHeaderProps) => {
 
     return (
-        <div className='profile-header' onClick={onClickAvatar}>
+        <div className='profile-header'>
             <div className="near-logo-wrapper" >
                 <img alt="near-logo" src={smallLogo} />
             </div>
-            <div className="profile-avatar">
+            <div className="profile-avatar" onClick={onClickAvatar}>
                 <img alt="avatar" src={avatar} />
                 <span className="username">
-                    {`${accountId}.near`}
+                    {accountId}
                 </span>
                 <ArrowDropDownIcon fontSize="large" />
             </div>

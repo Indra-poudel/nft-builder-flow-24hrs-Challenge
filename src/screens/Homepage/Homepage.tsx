@@ -96,8 +96,8 @@ const Homepage = () => {
 
         <div className="email-phone-field-wrapper">
           {selectedMedium === VerificationCodeMedium.phone ?
-            <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='phone' placeholder={HOMEPAGE_LOCALE.PLACEHOLDER.EMAIL} />
-            : <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='email' placeholder={HOMEPAGE_LOCALE.PLACEHOLDER.PHONE} />}
+            <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='phone' placeholder={HOMEPAGE_LOCALE.PLACEHOLDER.PHONE} />
+            : <TextField errorMessage={errorMessage} value={inputText} onChange={handleInputChange} inputId='email' placeholder={HOMEPAGE_LOCALE.PLACEHOLDER.EMAIL} />}
           <Button label="Continue" onClick={handleContinueClick} buttonType={inputText ? 'primary' : 'disable'} />
         </div>
       </div>
